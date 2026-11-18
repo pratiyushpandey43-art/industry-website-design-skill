@@ -212,7 +212,7 @@ function localFurniturePhoto(
             : label;
   const description = localFurniturePhotoDescriptions[kind][n - 1];
   return {
-    src: `/assets/${folder}/${fileStem}-${String(n).padStart(2, "0")}.jpg`,
+    src: `/assets/${folder}/${fileStem}-${String(n).padStart(2, "0")}.webp`,
     alt: `Authentic ${label} showroom photograph showing ${description} at HI Liquidation Home Outlet`,
     caption: `${label[0].toUpperCase()}${label.slice(1)} showroom photograph`,
   };
@@ -331,3 +331,4 @@ export const assetManifest = {
   ],
   petFurniture: [localFurniturePhoto("pet-furniture", 1), localFurniturePhoto("pet-furniture", 2)],
 } as const;
+
