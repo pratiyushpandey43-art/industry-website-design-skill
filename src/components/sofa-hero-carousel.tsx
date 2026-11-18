@@ -9,10 +9,10 @@ const EMBLA_DURATION = 36;
 const IMAGE_SIZES = "(max-width: 1023px) calc(100vw - 2.5rem), 50vw";
 
 function responsiveSources(src: string) {
-  const base = src.replace(/\.jpg$/i, "");
+  const base = src.replace(/\.(jpg|webp)$/i, "");
 
   return {
-    fallbackSrcSet: `${base}-1600.jpg 1600w, ${base}-2400.jpg 2400w`,
+    fallbackSrcSet: `${base}-1600.webp 1600w, ${base}-2400.webp 2400w`,
     webpSrcSet: `${base}-1600.webp 1600w, ${base}-2400.webp 2400w`,
   };
 }
@@ -268,3 +268,4 @@ export function SofaHeroCarousel({ images, label }: { images: readonly Media[]; 
     </div>
   );
 }
+
